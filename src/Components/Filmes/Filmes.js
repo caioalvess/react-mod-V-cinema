@@ -7,11 +7,11 @@ export class Filmes extends Component {
       <div style={{ width: "100%", height: "100vh", overflowY: "scroll" }}>
         <div className="generos">
           <ul>
-            <li>Ação</li>
-            <li>Terror</li>
-            <li>Comédia</li>
-            <li>Romance</li>
-            <li>Drama</li>
+            <li className="bn638-hover bn28">Ação</li>
+            <li className="bn638-hover bn28">Terror</li>
+            <li className="bn638-hover bn28">Comédia</li>
+            <li className="bn638-hover bn28">Romance</li>
+            <li className="bn638-hover bn28">Drama</li>
           </ul>
         </div>
         <div className="filmes">

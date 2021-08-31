@@ -1,44 +1,28 @@
 .generos {
   width: 100%;
-  background-color: #181818;
-}
-.generos ul {
+  background-color: transparent;
   display: flex;
   justify-content: center;
-  padding: 0;
-  margin: 0;
+  align-items: center;
 }
-.generos ul li {
-  padding: 10px 30px;
-  color: #fff;
-  cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+.generos ul {
+  width: 90%;
+  padding: 10px;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-right: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(2px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
   transition: 0.3s;
   color: #fff;
-  overflow: hidden;
-  position: relative;
-  margin: 0 10px;
-  text-transform: uppercase;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
-.generos ul li:hover {
-  transform: translateY(4px);
-}
-.generos ul li::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100px;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.5);
-  transform: skewX(45deg) translateX(150px);
-  transition: 0.3s;
-}
-.generos ul li:hover::before {
-  transform: skewX(45deg) translateX(-150px);
+.generos ul:hover {
+  transform: translateY(6px);
 }
 .filmes ul {
   width: 100%;
@@ -51,4 +35,44 @@
   height: 300px;
   border: solid 1px black;
   margin: 20px;
+}
+
+.bn638-hover {
+  width: 100px;
+  cursor: pointer;
+  height: 45px;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 10px;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.bn638-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.bn638-hover:focus {
+  outline: none;
+}
+
+.bn638-hover.bn28 {
+  background-image: linear-gradient(
+    to right,
+    #fc6076,
+    #ff9a44,
+    #ef9d43,
+    #e75516
+  );
+  box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
 }

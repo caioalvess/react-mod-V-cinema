@@ -4,9 +4,9 @@ import "./Sobre.modules.css";
 export class Sobre extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <h1>Este é o Sobre</h1>
-      </div>
+      </React.Fragment>
     );
   }
 }
