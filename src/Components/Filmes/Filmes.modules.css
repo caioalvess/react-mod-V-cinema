@@ -11,30 +11,15 @@
   margin-top: 0;
   display: flex;
   justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-top: none;
   backdrop-filter: blur(10px);
   transition: 0.3s;
   color: #fff;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 40px;
 }
 .generos ul:hover {
   transform: translateY(6px);
-}
-.filmes ul {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
-.filmes ul li {
-  width: 200px;
-  height: 300px;
-  border: solid 1px black;
-  margin: 20px;
 }
 
 .bn638-hover {

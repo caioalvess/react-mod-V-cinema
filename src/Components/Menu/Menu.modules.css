@@ -11,7 +11,7 @@
   backdrop-filter: blur(10px);
   box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
     rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
-  border-top-right-radius: 20px;
+  border-top-right-radius: 40px;
   transition: 0.3s;
 }
 .perfilAndMenu:hover {

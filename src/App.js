@@ -5,6 +5,7 @@ import Filmes from "./Components/Filmes/Filmes";
 import Login from "./Components/Login/Login";
 import Menu from "./Components/Menu/Menu";
 import Sobre from "./Components/Sobre/Sobre";
+import Ingresso from "./Components/Ingresso/Ingresso";
 
 class App extends React.Component {
   constructor(props) {
@@ -30,6 +31,10 @@ class App extends React.Component {
             <Menu />
             <Sobre />
           </Route>
+          <Route
+            path="/ingresso/:id"
+            render={(props) => <Ingresso {...props} />}
+          />
         </Switch>
       </div>
     );
