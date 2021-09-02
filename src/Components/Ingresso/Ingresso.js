@@ -9,10 +9,20 @@ export class Ingresso extends Component {
       filmes: [],
       contador: 1,
       preco: 16.0,
+      status: 1,
+      nome: "",
+      email: "",
     };
     this.loadFilmes = this.loadFilmes.bind(this);
     this.diminuir = this.diminuir.bind(this);
     this.aumentar = this.aumentar.bind(this);
+    this.continuar = this.continuar.bind(this);
+  }
+
+  continuar() {
+    let state = this.state;
+    state.status = 2;
+    this.setState(state);
   }
 
   diminuir() {
@@ -101,11 +111,59 @@ export class Ingresso extends Component {
                 <h2>{this.state.contador}</h2>
                 <button onClick={this.aumentar}>+</button>
               </div>
-              <a className="comprarFilme" href="">
-                <h2 onClick={this.confirmarCompra}>Comprar</h2>
-              </a>
+              <button
+                style={{ width: "200px", height: "60px", fontSize: "20px" }}
+                onClick={this.continuar}
+                className="bn632-hover bn20"
+              >
+                Continuar
+              </button>
             </div>
           </div>
+          {this.state.status === 2 && (
+            <div className="confirmBuy">
+              <form action="http://diegoesg.com:2020/ingresso" method="POST">
+                <p>Por favor, digite os dados abaixo!</p>
+                <div className="form1">
+                  <label htmlFor="nome">Nome e Sobrenome:</label>
+                  <input
+                    name="nome"
+                    type="text"
+                    value={this.state.nome}
+                    onChange={(e) => this.setState({ nome: e.target.value })}
+                  />
+                  <label htmlFor="email">E-mail:</label>
+                  <input
+                    name="email"
+                    type="email"
+                    value={this.state.email}
+                    onChange={(e) => this.setState({ email: e.target.value })}
+                  />
+                </div>
+                <div className="form2">
+                  <input
+                    type="hidden"
+                    name="filme"
+                    value={this.state.filmes.titulo}
+                  />
+                  <input type="hidden" name="valor" value={this.state.preco} />
+                  <input
+                    type="hidden"
+                    name="quantidade"
+                    value={this.state.contador}
+                  />
+                </div>
+                <button
+                  type="submit"
+                  onClick={this.confirmaCompra}
+                  style={{ width: "200px", height: "60px", fontSize: "20px" }}
+                  className="bn632-hover bn20"
+                >
+                  Comprar
+                </button>
+              </form>
+            </div>
+          )}
         </div>
       </React.Fragment>
     );

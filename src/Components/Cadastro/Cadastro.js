@@ -9,6 +9,7 @@ export class Cadastro extends Component {
       senha: "",
       confirmSenha: "",
       error: "",
+      success: "",
       usuario: [],
     };
     //BIND
@@ -31,6 +32,7 @@ export class Cadastro extends Component {
         error: "A senha deve ter no mínimo 8 e no máximo 70 caracteres.",
       });
     } else {
+      this.setState({ error: "Cadastro realizado com sucesso!" });
       let dataCadastro = {
         nome: this.state.nome,
         email: this.state.email,
@@ -51,7 +53,7 @@ export class Cadastro extends Component {
           this.setState(state);
           let dados = json;
           if (dados.login === true) {
-            this.setState({ loginError: "Cadastro realizado com sucesso!" });
+            this.setState({ error: "Cadastro realizado com sucesso!" });
           }
           console.log(dados);
         });
@@ -63,11 +65,11 @@ export class Cadastro extends Component {
       <div>
         <form>
           <h1>Cadastro</h1>
-          {this.state.error ? (
-            <p style={{ position: "absolute", bottom: "0", color: "tomato" }}>
-              {this.state.error}
-            </p>
-          ) : null}
+
+          <p style={{ position: "absolute", bottom: "0", color: "tomato" }}>
+            {this.state.error}
+          </p>
+
           <label htmlFor="nome">Nome e Sobrenome: </label>
           <input
             type="text"
