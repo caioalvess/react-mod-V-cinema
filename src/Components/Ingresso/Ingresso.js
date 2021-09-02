@@ -11,9 +11,8 @@ export class Ingresso extends Component {
       preco: 16.0,
     };
     this.loadFilmes = this.loadFilmes.bind(this);
-    // this.diminuir = this.diminuir.bind(this);
-    // this.aumentar = this.aumentar.bind(this);
-    // this.confirmarCompra = this.confirmarCompra.bind(this);
+    this.diminuir = this.diminuir.bind(this);
+    this.aumentar = this.aumentar.bind(this);
   }
 
   diminuir() {

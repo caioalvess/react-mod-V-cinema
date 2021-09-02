@@ -13,6 +13,7 @@
     rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
   border-top-right-radius: 40px;
   transition: 0.3s;
+  z-index: 10000;
 }
 .perfilAndMenu:hover {
   transform: translatex(6px);

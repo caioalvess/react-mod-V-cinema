@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./Menu.modules.css";
-import imgPerfil from "../../assets/img/perfil.png";
 import imgFilmes from "../../assets/img/play-button (4).png";
 import imgSobre from "../../assets/img/help-button.png";
 import imgContato from "../../assets/img/call.png";
@@ -24,22 +23,6 @@ export class Menu extends Component {
         </div>
         <div className="menu">
           <ul>
-            <li className="bn632-hover bn20">
-              <Link
-                style={{ listStyle: "none", textDecoration: "none" }}
-                to="/perfil"
-              >
-                <img
-                  style={{
-                    width: "40px",
-                    filter:
-                      "invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%) ",
-                  }}
-                  src={imgPerfil}
-                  alt=""
-                />
-              </Link>
-            </li>
             <li className="bn632-hover bn20">
               <Link
                 style={{ listStyle: "none", textDecoration: "none" }}
