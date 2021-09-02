@@ -29,7 +29,6 @@ export class Sobre extends Component {
         <div className="text">
           <p>
             <i>
-              {" "}
               “No Cine Resilia temos bons lanches, boas bebidas e ótimos filmes,
               tudo isso em um único lugar!”{" "}
             </i>
@@ -38,7 +37,6 @@ export class Sobre extends Component {
             mais de duas décadas, trabalhamos para tornar a experiência do Cine
             Resilia a melhor experiência cinematográfica do mundo. <br />
             <h3>
-              {" "}
               <i> Os melhores filmes já feitos.</i>
             </h3>
             <strong> Não queremos ser apenas mais um multiplex</strong>. Todos
